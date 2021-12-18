@@ -2,7 +2,7 @@
   "name": "vueblog",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "FatDong1 <yangcongcong@foxmail.com>",
+  "author": "FatDong1 <xuhaodong66@foxmail.com>",
   "private": true,
   "scripts": {
     "start": "cross-env NODE_ENV=development supervisor -i src server/app.js",
@@ -80,5 +80,7 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": "index.js",
+  "license": "ISC"
 }
