@@ -191,6 +191,8 @@ github地址：https://github.com/ycc123456789/-/tree/master
 
 在这次大作业中，我参考了许多github的作品，最终选择了一个模板进行制作，前前后后花费了两周的时间，感受颇深，体会到一个系统完成的不容易，但是也非常的有成就感，和上学期的web课大作业一样，虽然从jsp和sql换成了nodejs和mongodb，制作一个系统的总思路和总流程是一样的。作为一个大三的学生了，在未来，我相信我会越来越强，我也会继续不断的提升自己。
 
+![image-20211220045557778](typora-user-images/image-20211220045557778.png)
+
 第一次提交：
 
 我测试使用github仓库，以及摸索如何提交，保证提交不会出现失误。在测试完成后我新建了空文件夹，包括系统代码和项目设计开发说明书。git的提交流程为git init——git add .——git commit -m 'first commit'——git remote add origin https://github.com/ycc123456789/-/tree/master——git pull --rebase origin master——git push -u origin master。
