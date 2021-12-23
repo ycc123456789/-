@@ -14,9 +14,13 @@ github地址：https://github.com/ycc123456789/-/tree/master
 
 连接数据库：mongod --dbpath  /home----
 
-打开终端输入：npm run start & npm run dev
+打开终端输入：node run.js  或者 npm run start & npm run dev
 
 项目系统就会自动运行在：http://localhost:10734/
+
+部署服务器在http://172.21.2.236:10734，只需进入”系统代码“文件夹运行node run.js即可
+
+站长登录方式：点击最下面的站长登录，账号为boss，密码为123456
 
 ## 项目设计部分
 
