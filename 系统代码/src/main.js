@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 
 Vue.use(VueResource)
 
-Vue.filter('toDate', (date) => {                    // 2021年5月10日15：35
+Vue.filter('toDate', (date) => {              
     if (date) {
         const d = new Date(date)
         const minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
@@ -19,7 +19,7 @@ Vue.filter('toDate', (date) => {                    // 2021年5月10日15：35
     }
 })
 
-Vue.filter('to_date', (date) => {                   // 2021-5-10 at 15：35
+Vue.filter('to_date', (date) => {          
     if (date) {
         const d = new Date(date)
         const minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
