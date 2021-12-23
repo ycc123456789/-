@@ -1,4 +1,3 @@
-require('./check-versions')()
 
 var config = require('../config')
 if (!process.env.NODE_ENV) {
@@ -12,12 +11,11 @@ var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
 
-// default port where dev server listens for incoming traffic
+//dev服务器侦听传入流量的默认端口
 var port = process.env.PORT || config.dev.port
-// automatically open browser, if not set will be false
+//自动打开浏览器，如果未设置将为false
 var autoOpenBrowser = !!config.dev.autoOpenBrowser
-// Define HTTP proxies to your custom API backend
-// https://github.com/chimurai/http-proxy-middleware
+// 定义自定义API后端的HTTP代理
 var proxyTable = config.dev.proxyTable
 
 var app = express()
@@ -31,7 +29,7 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: () => {}
 })
-// force page reload when html-webpack-plugin template changes
+// html网页包插件模板更改时强制重新加载页面
 compiler.plugin('compilation', function (compilation) {
   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
     hotMiddleware.publish({ action: 'reload' })
@@ -39,7 +37,7 @@ compiler.plugin('compilation', function (compilation) {
   })
 })
 
-// proxy api requests
+// 代理api请求
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]
   if (typeof options === 'string') {
@@ -48,17 +46,17 @@ Object.keys(proxyTable).forEach(function (context) {
   app.use(proxyMiddleware(options.filter || context, options))
 })
 
-// handle fallback for HTML5 history API
+// 处理HTML5历史API的回退
 app.use(require('connect-history-api-fallback')())
 
-// serve webpack bundle output
+// 提供网页包输出
 app.use(devMiddleware)
 
-// enable hot-reload and state-preserving
-// compilation error display
+// 启用热重新加载和状态保持
+// 编译错误显示
 app.use(hotMiddleware)
 
-// serve pure static assets
+// 服务于纯静态资产
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
@@ -74,7 +72,7 @@ module.exports = app.listen(port, function (err) {
     return
   }
 
-  // when env is testing, don't need open it
+  //当env正在测试时，不需要打开它
   if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
     opn(uri)
   }

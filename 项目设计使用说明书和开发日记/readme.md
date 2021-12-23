@@ -12,13 +12,15 @@ github地址：https://github.com/ycc123456789/-/tree/master
 
 运行方式：
 
-连接数据库：mongod --dbpath  /home----
+部署服务器：在http://172.21.2.236:10734，只需进入”系统代码“文件夹运行node run.js即可
 
-打开终端输入：node run.js  或者 npm run start & npm run dev
+​                       部署过程可见下文项目设计部分第三节
 
-项目系统就会自动运行在：http://localhost:10734/
+本地： 连接数据库：mongod --dbpath  /home----
 
-部署服务器在http://172.21.2.236:10734，只需进入”系统代码“文件夹运行node run.js即可
+​            打开终端输入：node run.js  或者 npm run start & npm run dev
+
+​            项目系统就会自动运行在：http://localhost:10734/
 
 站长登录方式：点击最下面的站长登录，账号为boss，密码为123456
 
@@ -144,6 +146,21 @@ github地址：https://github.com/ycc123456789/-/tree/master
 │   └─store           vuex文件
 │
 └─static            静态文件照片
+
+### 3）项目部署
+
+将项目部署到172.21.2.236:10734上，数据库地址为：mongodb://172.21.2.236/190110910734
+
+过程：scp -r 期末大作业/ osuser@172.21.2.236:~/190110910734将文件传入
+
+然后进入我自己的文件夹中进行运行测试：
+![image-20211223050218516](typora-user-images/image-20211223050218516.png)
+
+然后在网页中打开172.21.2.236:10734端口，进入部署的地址，进行测试数据
+
+
+
+![image-20211223050330495](typora-user-images/image-20211223050330495.png)
 
 ## 使用说明书
 
